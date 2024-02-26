@@ -10,5 +10,8 @@ public class RectangleHitbox(Rectangle rectangle)
 }
 public class ApplyGravity()
 {
-    
+    private readonly int _GravityVariable;
+    protected float _GravityScale;
+    protected float _Mass;
+
 }
