@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "JG+qps26o7oxyBqYQZT/+GvrG8LncG3v3K6vJhF6kuJ8JRXvwgLnaUwMA/spCxCItTBf2HhKwc22Jx5mV00DRw==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\richard.nilsson\\haleoegk\\slutprojfecjte\\slutprojfecjte.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\richard.nilsson\\.nuget\\packages\\raylib-cs\\6.0.0\\raylib-cs.6.0.0.nupkg.sha512",
+    "C:\\Users\\richard.nilsson\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
