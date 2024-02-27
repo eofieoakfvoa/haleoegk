@@ -20,3 +20,4 @@ c:\Users\richard.nilsson\haleoegk\slutprojfecjte\obj\Debug\net8.0\refint\slutpro
 c:\Users\richard.nilsson\haleoegk\slutprojfecjte\obj\Debug\net8.0\slutprojfecjte.pdb
 c:\Users\richard.nilsson\haleoegk\slutprojfecjte\obj\Debug\net8.0\slutprojfecjte.genruntimeconfig.cache
 c:\Users\richard.nilsson\haleoegk\slutprojfecjte\obj\Debug\net8.0\ref\slutprojfecjte.dll
+c:\Users\richard.nilsson\haleoegk\slutprojfecjte\obj\Debug\net8.0\slutprojfecjte.sourcelink.json

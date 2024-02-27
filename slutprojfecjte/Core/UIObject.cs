@@ -5,7 +5,6 @@ public class UIObject : GameObject
 {
     private bool _enabled = true;
     private string _name;
-    private Vector3 _position;
     private int _zIndex;
     protected Rectangle _rect;
     protected string _text;
