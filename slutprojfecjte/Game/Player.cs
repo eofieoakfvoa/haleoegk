@@ -4,19 +4,23 @@ using Raylib_cs;
 
 public class PlayerClass : Entity
 {
-    private GameMananger _gameMananger;
-    
+    private readonly GameMananger _gameMananger;
+    private readonly int PlayerHeight = 15;
+    private readonly int PlayerWidth = 15;
     public PlayerClass(GameMananger gameManager)
     {
         
         _gameMananger = gameManager;
         CanTakeDamage = true;
+        MovementSpeed = 4;
         Health = 5;
         _position = new Vector2(60,60);
-        playerRectangle = new Rectangle(_position,15,15);
+        playerRectangle = new Rectangle(_position,PlayerWidth,PlayerHeight);
     }
-    //private RectangleHitbox hitbox = new(new Rectangle(0,0,15,15));
     private Rectangle playerRectangle;
+
+
+
     public override void Draw()
     {
         Raylib.DrawRectangleRec(playerRectangle, Color.Black);
@@ -30,21 +34,19 @@ public class PlayerClass : Entity
         if (Raylib.IsKeyDown(KeyboardKey.W))
         {
             Console.WriteLine(_position);
-            Movement("Vertical", -4);
+            Movement("Vertical", -MovementSpeed);
         }
         if (Raylib.IsKeyDown(KeyboardKey.S))
         {
-            Movement("Vertical", 4);
+            Movement("Vertical", MovementSpeed);
         }
         if (Raylib.IsKeyDown(KeyboardKey.A))
         {
-            Movement("Horizontal", -4);
+            Movement("Horizontal", -MovementSpeed);
         }
         if (Raylib.IsKeyDown(KeyboardKey.D))
         {
-            Movement("Horizontal", 4);
-            Console.WriteLine(Health);
-            TakeDamage(1);
+            Movement("Horizontal", MovementSpeed);
         }
     }
     private void Movement(string Direction, int Speed)

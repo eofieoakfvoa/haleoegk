@@ -3,11 +3,17 @@ public class Entity : GameObject
 {
     private int _Health;
     private bool _canTakeDamage;
+    private int _MovementSpeed;
     
     public int Health
     {
         get {return _Health;}
         set {_Health = value;}
+    }
+    public int MovementSpeed
+    {
+        get {return _MovementSpeed;}
+        set {_MovementSpeed = value;}
     }
     public bool CanTakeDamage
     {
