@@ -7,6 +7,9 @@ public class PlayerClass : Entity
     private readonly GameMananger _gameMananger;
     private readonly int PlayerHeight = 15;
     private readonly int PlayerWidth = 15;
+    private Rectangle _playerRectangle;
+
+    private ApplyGravity _Gravity;
     public PlayerClass(GameMananger gameManager)
     {
         
@@ -15,9 +18,9 @@ public class PlayerClass : Entity
         MovementSpeed = 4;
         Health = 5;
         _position = new Vector2(60,60);
-        playerRectangle = new Rectangle(_position,PlayerWidth,PlayerHeight);
+        _playerRectangle = new Rectangle(_position,PlayerWidth,PlayerHeight);
+        _Gravity = new(_playerRectangle);
     }
-    private Rectangle playerRectangle;
 
 
 
@@ -33,7 +36,6 @@ public class PlayerClass : Entity
     {
         if (Raylib.IsKeyDown(KeyboardKey.W))
         {
-            Console.WriteLine(_position);
             Movement("Vertical", -MovementSpeed);
         }
         if (Raylib.IsKeyDown(KeyboardKey.S))

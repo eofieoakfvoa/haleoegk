@@ -11,6 +11,6 @@ public class GameObject
 
   public virtual void Draw()
   {
-
+    
   }
 }

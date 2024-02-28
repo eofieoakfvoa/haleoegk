@@ -8,10 +8,15 @@ public class RectangleHitbox(Rectangle rectangle)
         return Raylib.CheckCollisionRecs(Hitbox, other);
     }
 }
-public class ApplyGravity()
+public class ApplyGravity(Rectangle rectangle)
 {
-    private readonly int _GravityVariable;
+    private readonly int _GravityVariable = 1;
     protected float _GravityScale;
     protected float _Mass;
+
+    public void Gravity()
+    {
+        rectangle.Y =- _GravityVariable * _GravityScale * _Mass;
+    }
 
 }

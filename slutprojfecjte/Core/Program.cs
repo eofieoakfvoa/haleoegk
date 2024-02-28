@@ -20,7 +20,6 @@ while (!Raylib.WindowShouldClose())
 {
   
   GameMananger.Scenes CurrentScene = gameMananger.GetCurrentScene();
-  Console.WriteLine(CurrentScene);
   float deltaTime = Raylib.GetFrameTime();
   Vector2 mousePosition = Raylib.GetMousePosition();
   
