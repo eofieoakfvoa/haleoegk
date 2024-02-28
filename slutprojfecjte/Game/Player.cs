@@ -26,7 +26,7 @@ public class PlayerClass : Entity
 
     public override void Draw()
     {
-        Raylib.DrawRectangleRec(playerRectangle, Color.Black);
+        Raylib.DrawRectangleRec(_playerRectangle, Color.Black);
     }
     public override void HandleDeath()
     {
@@ -55,11 +55,11 @@ public class PlayerClass : Entity
     {
         if (Direction == "Horizontal")
         {
-            playerRectangle.X += Speed;
+            _playerRectangle.X += Speed;
         }
         if (Direction == "Vertical")
         {
-            playerRectangle.Y += Speed;
+            _playerRectangle.Y += Speed;
         }
     }
 }
