@@ -19,7 +19,7 @@ public class PlayerClass : Entity
         Health = 5;
         _position = new Vector2(60,60);
         _playerRectangle = new Rectangle(_position,PlayerWidth,PlayerHeight);
-        _Gravity = new(_playerRectangle);
+        _Gravity = new(_playerRectangle, 1,1);
     }
 
 
@@ -34,6 +34,7 @@ public class PlayerClass : Entity
     }
     public override void Update(float deltaTime)
     {
+        _Gravity.Gravity();
         if (Raylib.IsKeyDown(KeyboardKey.W))
         {
             Movement("Vertical", -MovementSpeed);
