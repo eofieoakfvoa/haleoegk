@@ -1,5 +1,7 @@
 using System.Numerics;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
+using System.Security.Principal;
 using Raylib_cs;
 
 public class PlayerClass : Entity
@@ -17,9 +19,9 @@ public class PlayerClass : Entity
         CanTakeDamage = true;
         MovementSpeed = 4;
         Health = 5;
-        _position = new Vector2(60,60);
-        _playerRectangle = new Rectangle(_position,PlayerWidth,PlayerHeight);
-        _Gravity = new(_playerRectangle, 1,1);
+        Position = new Vector2(60,60);
+        _playerRectangle = new Rectangle(Position,PlayerWidth,PlayerHeight);
+        _Gravity = new(Position, 1,1);
     }
 
 
@@ -34,7 +36,13 @@ public class PlayerClass : Entity
     }
     public override void Update(float deltaTime)
     {
-        _Gravity.Gravity();
+
+        Console.WriteLine(_Position);
+        Position = _Gravity.Gravity(Position); 
+
+        _playerRectangle.Position = Position;
+
+
         if (Raylib.IsKeyDown(KeyboardKey.W))
         {
             Movement("Vertical", -MovementSpeed);
@@ -56,11 +64,12 @@ public class PlayerClass : Entity
     {
         if (Direction == "Horizontal")
         {
-            _playerRectangle.X += Speed;
+            _Position.X += Speed;
         }
         if (Direction == "Vertical")
         {
-            _playerRectangle.Y += Speed;
+            _Position.Y += Speed;
         }
     }
+
 }

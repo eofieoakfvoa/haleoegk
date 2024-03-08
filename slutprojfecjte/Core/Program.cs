@@ -1,5 +1,6 @@
 ﻿using Raylib_cs;
 using System.Numerics;
+using System.Runtime.InteropServices;
 
 Raylib.InitWindow(800, 600, "GJAIGAV");
 Raylib.SetTargetFPS(60);

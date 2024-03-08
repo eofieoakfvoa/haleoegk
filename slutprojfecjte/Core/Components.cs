@@ -1,3 +1,4 @@
+using System.Numerics;
 using Raylib_cs;
 public class RectangleHitbox(Rectangle rectangle)
 {
@@ -13,19 +14,20 @@ public class ApplyGravity
     private readonly int _GravityVariable = 1;
     protected float _GravityScale;
     protected float _Mass;
-    private Rectangle _Rectangle;
-    public ApplyGravity(Rectangle Rectangle, float gravityScale, float Mass)
+    private Vector2 _Position;
+    public ApplyGravity(Vector2 Position, float gravityScale, float Mass)
     {
-        _Rectangle = Rectangle;
+        
+        _Position = Position;
         _GravityScale = gravityScale;
         _Mass = Mass;
 
     }
 
-    public void Gravity()
+    public Vector2 Gravity(Vector2 Position)
     {
-        Console.WriteLine(_Rectangle.Position);
-        _Rectangle.Y -= _GravityVariable;
+        Position.Y += _GravityVariable;
+        return Position;
     }
 
 }
