@@ -1,6 +1,7 @@
 using Raylib_cs;
 public class Entity : GameObject
 {
+    // Initialize the inconstants.
     private int _Health;
     private bool _canTakeDamage;
     private int _movementSpeed;
@@ -21,7 +22,7 @@ public class Entity : GameObject
         set {_canTakeDamage = value;}
     }
 
-    public void TakeDamage(int Damage) // They shall take inpairment to own self, but only if thee can taketh damage.
+    public void TakeDamage(int Damage) // They shall take inpairment to own self, but Only if thee can taketh damage.
     {   
 
         if (_canTakeDamage && Damage >= 0)
@@ -34,5 +35,5 @@ public class Entity : GameObject
             } 
         }
     }
-    public virtual void HandleDeath(){} // They who inheritance  changeth the function to a more appaling useth case 
+    public virtual void HandleDeath(){} // They who inheritance  changeth the function to a more pleasurable useth case.
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\richard.nilsson\\haleoegk\\slutprojfecjte\\slutprojfecjte.csproj": {}
+    "C:\\Users\\richard.nilsson\\haleoegk\\slutprojfecjte\\slutprojfecjte.csproj": {}
   },
   "projects": {
-    "c:\\Users\\richard.nilsson\\haleoegk\\slutprojfecjte\\slutprojfecjte.csproj": {
+    "C:\\Users\\richard.nilsson\\haleoegk\\slutprojfecjte\\slutprojfecjte.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\richard.nilsson\\haleoegk\\slutprojfecjte\\slutprojfecjte.csproj",
+        "projectUniqueName": "C:\\Users\\richard.nilsson\\haleoegk\\slutprojfecjte\\slutprojfecjte.csproj",
         "projectName": "slutprojfecjte",
-        "projectPath": "c:\\Users\\richard.nilsson\\haleoegk\\slutprojfecjte\\slutprojfecjte.csproj",
+        "projectPath": "C:\\Users\\richard.nilsson\\haleoegk\\slutprojfecjte\\slutprojfecjte.csproj",
         "packagesPath": "C:\\Users\\richard.nilsson\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\richard.nilsson\\haleoegk\\slutprojfecjte\\obj\\",
+        "outputPath": "C:\\Users\\richard.nilsson\\haleoegk\\slutprojfecjte\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
