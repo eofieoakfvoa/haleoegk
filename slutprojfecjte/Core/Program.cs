@@ -19,24 +19,24 @@ List<UIButton> buttons =
 
 while (!Raylib.WindowShouldClose())
 {
-  
+
   GameMananger.Scenes CurrentScene = gameMananger.GetCurrentScene();
   float deltaTime = Raylib.GetFrameTime();
   Vector2 mousePosition = Raylib.GetMousePosition();
-  
+
 
 
   if (CurrentScene == GameMananger.Scenes.Game)
   {
     game.game(mousePosition, deltaTime);
   }
-  
+
   else if (CurrentScene == GameMananger.Scenes.StartMenu)
   {
     startScreen.Menu(mousePosition);
 
   }
-  
+
 
   Raylib.BeginDrawing();
   Raylib.ClearBackground(Color.White);
@@ -46,7 +46,7 @@ while (!Raylib.WindowShouldClose())
     game.Draw();
 
   }
-  
+
   else if (CurrentScene == GameMananger.Scenes.StartMenu)
   {
     startScreen.Draw();

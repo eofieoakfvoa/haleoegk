@@ -14,13 +14,13 @@ public class StartScreen(GameMananger gameMananger)
     {
         if (Raylib.IsMouseButtonPressed(0))
         {
-        foreach (UIButton b in buttons)
-        {
-            if (b.MouseHovering(mousePosition))
+            foreach (UIButton b in buttons)
             {
-            b.Click();
+                if (b.MouseHovering(mousePosition))
+                {
+                    b.Click();
+                }
             }
-        }
         }
 
     }

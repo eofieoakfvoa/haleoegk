@@ -9,20 +9,21 @@ public class PlayerClass : Entity
     private readonly int PlayerHeight = 15;
     private readonly int PlayerWidth = 15;
     private Rectangle _playerRectangle;
-
     private ApplyGravity _Gravity;
+    private RectangleHitbox _Hitbox;
 
     //Constructor // set variablerna
     public PlayerClass(GameMananger gameManager)
     {
-        
+
         _gameMananger = gameManager;
+        _Hitbox = new(_playerRectangle);
         CanTakeDamage = true;
         MovementSpeed = 4;
         Health = 5;
-        Position = new Vector2(60,60);
-        _playerRectangle = new Rectangle(Position,PlayerWidth,PlayerHeight);
-        _Gravity = new(Position, 1,1);
+        Position = new Vector2(60, 60);
+        _playerRectangle = new Rectangle(Position, PlayerWidth, PlayerHeight);
+        _Gravity = new(1, 1);
     }
 
 
@@ -38,8 +39,8 @@ public class PlayerClass : Entity
     public override void Update(float deltaTime)
     {
 
-        Console.WriteLine(_Position);
-        Position = _Gravity.Gravity(Position); 
+        Console.WriteLine(Position);
+        Position = _Gravity.Gravity(Position);
 
         _playerRectangle.Position = Position;
 
@@ -61,7 +62,7 @@ public class PlayerClass : Entity
             Movement("Horizontal", MovementSpeed);
         }
     }
-    
+
     private void Movement(string Direction, int Speed)
     {
         // * gör detta till sin egna ksk för lättare för movement för andra saker
